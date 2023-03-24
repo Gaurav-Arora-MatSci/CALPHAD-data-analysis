@@ -1,0 +1,98 @@
+<pbfx version="1.0"  encoding="utf-8">
+	<Header copyright="CompuTherm, LLC">
+		<!-- this file defines the syntax for a batch calculation -->
+		<Application name="Pandat" version="2023" />
+	</Header>
+
+	<calculation name="Line_AlMgSi" type="line">
+
+		<databases>
+			<database type="tdb" file_name="C:\Program Files\CompuTherm LLC\Pandat 2022a\PanRHEA2022a_TH+MV.pdb" />
+		</databases>
+
+		<units>
+			<unit name="P" value="bar"/>
+			<unit name="T" value="C"/>
+			<unit name="n" value="x%"/>
+		</units>
+
+		<system name="Default_System">
+			<components>
+				<component name="Al" status="Selected"/>
+				<component name="Co" status="Selected"/>
+				<component name="Cr" status="Selected"/>
+				<component name="Mn" status="Selected"/>
+				<component name="Ti" status="Selected"/>
+				<component name="V" status="Selected"/>
+			</components>
+
+			<phases>
+				<phase name="*" status="Entered" />
+			</phases>
+
+			<points>
+				<point>
+					<statespace>
+						<T value="0"/>
+						<P value="1"/>
+						<n component="Al" value="10" />
+						<n component="Co" value="2" />
+						<n component="Cr" value="27" />
+						<n component="Mn" value="30" />
+						<n component="Ti" value="3" />
+						<n component="V" value="28" />
+					</statespace>
+				</point>
+				<point>
+					<statespace>
+						<T value="2000"/>
+						<P value="1"/>
+						<n component="Al" value="10" />
+						<n component="Co" value="2" />
+						<n component="Cr" value="27" />
+						<n component="Mn" value="30" />
+						<n component="Ti" value="3" />
+						<n component="V" value="28" />
+					</statespace>
+				</point>
+			</points>
+
+			<condition>
+				<steps value="100"/>
+			</condition>
+
+		</system>
+
+		<output unit="">
+			<tables>
+				<table name="Default" source="Default" type="Default">
+					<column name="T"/>
+					<column name="P"/>
+					<column name="phase_name"/>
+					<column name="x(*)"/>
+					<column name="f(@*)"/>
+					<column name="G(@*)"/>
+					<column name="G"/>
+					<column name="w(*)"/>
+					<column name="n_kg"/>
+					<column name="n_mole"/>
+				    <column name="Cp" />
+				    <column name="alpha_Vm" />
+				    <column name="density" />
+				    <column name="conductivity" />
+				    <column name="G" />
+				</table>
+			</tables>
+
+			<graphs>
+				<graph name="Default">
+					<plot table_name="Default" xaxis="T" yaxis="f(@*)"/>
+				</graph>
+			</graphs>
+
+		</output>
+
+	</calculation>
+
+</pbfx>
+

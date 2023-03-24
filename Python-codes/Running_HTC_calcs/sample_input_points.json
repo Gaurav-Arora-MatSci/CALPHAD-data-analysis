@@ -1,0 +1,38 @@
+{
+  "Type": "line",
+  
+  "Units": {
+    "n": "x%"
+  },
+  "Al": {
+    "start": 0,
+    "end": 20,
+    "step size": 2
+  },
+  "Co": {
+    "start": 0,
+    "end": 5,
+    "step size": 1
+  },
+  "Ti": {
+    "start": 0,
+    "end": 20,
+    "step size": 2
+  },
+  "Cr": {
+    "start": 0,
+    "end": 50,
+    "step size": 3
+  },
+  "Mn": {
+    "start": 0,
+    "end": 50,
+    "step size": 3
+  },
+  "V": {
+    "start": 0,
+    "end": 50,
+    "step size": -1
+  }
+  
+}
